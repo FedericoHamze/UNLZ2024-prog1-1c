@@ -1,0 +1,202 @@
+// 1. Calcular el área y el perímetro de un rectángulo: 
+// Elabore un algoritmo en C++ para calcular el área y el perímetro de un rectángulo solicitando los datos necesarios al usuario.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float longitud, ancho;
+
+    // Solicitar al usuario la longitud y el ancho del rectángulo
+    cout << "Ingrese la longitud del rectangulo: ";
+    cin >> longitud;
+
+    cout << "Ingrese el ancho del rectangulo: ";
+    cin >> ancho;
+
+    // Calcular el área y el perímetro
+    float area = longitud * ancho;
+    float perimetro = 2 * (longitud + ancho);
+
+    // Mostrar el área y el perímetro
+    cout << "El area del rectangulo es: " << area << endl;
+    cout << "El perimetro del rectangulo es: " << perimetro << endl;
+
+    return 0;
+}
+
+// 2. Convertir cm a metros:
+// Elabore un algoritmo en C++ para convertir centímetros a metros
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float centimetros, metros;
+
+    // Solicitar al usuario la cantidad de centímetros
+    cout << "Ingrese la longitud en centimetros: ";
+    cin >> centimetros;
+
+    // Convertir centímetros a metros
+    metros = centimetros / 100.0; 
+
+    // Mostrar el resultado de la conversión
+    cout << centimetros << " centimetros equivalen a " << metros << " metros." << endl;
+
+    return 0;
+}
+
+// 3. Convertir Pesos Argentinos a Dolares
+// Elabore un algoritmo en C++ para convertir pesos argentinos a dólares estadounidenses. La cantidad de pesos y la cotización deberán ser solicitadas al usuario.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float pesos_argentinos, cotizacion_dolar, dolares;
+
+    // Solicitar al usuario la cantidad de pesos argentinos y la cotización del dólar
+    cout << "Ingrese la cantidad de pesos argentinos: ";
+    cin >> pesos_argentinos;
+
+    cout << "Ingrese la cotizacion del dolar: ";
+    cin >> cotizacion_dolar;
+
+    // Convertir pesos argentinos a dólares
+    dolares = pesos_argentinos / cotizacion_dolar;
+
+    // Mostrar el resultado 
+    cout << pesos_argentinos << " pesos argentinos equivalen a " << dolares << " dólares." << endl;
+
+    return 0;
+
+// 4. Calcular el área y el perímetro de un triángulo equilátero:
+//Elabore un algoritmo en C++ para calcular el área y el perímetro de un triángulo equilátero solicitando los datos necesarios al usuario.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float lado;
+    
+    // Solicitar al usuario la longitud del lado del triángulo equilátero
+    cout << "Ingrese la longitud del lado del triangulo: ";
+    cin >> lado;
+
+    // Calcular el perímetro (la suma de los tres lados)
+    float perimetro = 3 * lado;
+
+    // Calcular el área (fórmula para triángulo equilátero: (lado^2 * sqrt(3))/4)
+    float area = (pow(lado, 2) * sqrt(3)) / 4;
+
+    // Mostrar el resultado del perímetro y el área
+    cout << "El perimetro del triangulo equilatero es: " << perimetro << endl;
+    cout << "El area del triangulo equilatero es: " << area << endl;
+
+    return 0;
+}
+
+// 5. Calcular el área y el perímetro de una circunferencia:
+// Elabore un algoritmo en C++ para calcular el área y el perímetro de una
+// circunferencia. Se debe solicitar al usuario el dato del radio y se debe definir la constante PI=3.141592.
+
+#include <iostream>
+using namespace std;
+
+const float PI = 3.141592; // Definir la constante PI
+
+int main() {
+    float radio;
+
+    // Solicitar al usuario el radio de la circunferencia
+    cout << "Ingrese el radio de la circunferencia: ";
+    cin >> radio;
+
+    // Calcular el área (fórmula: π * radio^2)
+    float area = PI * radio * radio;
+
+    // Calcular el perímetro (fórmula: 2 * π * radio)
+    float perimetro = 2 * PI * radio;
+
+    // Mostrar el resultado del área y el perímetro
+    cout << "El area de la circunferencia es: " << area << endl;
+    cout << "El perimetro de la circunferencia es: " << perimetro << endl;
+    return 0;
+}
+
+// 6. Calcular la distancia a la que se encuentra una tormenta:
+// Elabore un algoritmo en C++ para calcular la distancia en metros a la que se encuentra una tormenta cronometrando los segundos transcurridos entre el 
+// relámpago y el trueno. Se debe tomar como constante la velocidad del sonido en 343 metros por segundo.
+
+#include <iostream>
+using namespace std;
+
+const float VELOCIDAD_SONIDO = 343.0; // Velocidad del sonido en metros por segundo
+
+int main() {
+    int segundos;
+
+    // Solicitar al usuario la cantidad de segundos transcurridos entre el relámpago y el trueno
+    cout << "Ingrese la cantidad de segundos transcurridos entre el relampago y el trueno: ";
+    cin >> segundos;
+
+    // Calcular la distancia utilizando la fórmula: distancia = velocidad * tiempo
+    float distancia = VELOCIDAD_SONIDO * segundos;
+
+    // Mostrar la distancia calculada
+    cout << "La distancia a la que se encuentra la tormenta es de " << distancia << " metros." << endl;
+    return 0;
+}
+
+// 7. Imprimir datos personales:
+// Elabore un algoritmo en C++ para imprimir los datos personales del usuario. Se deben solicitar los datos de Nombres, Apellido, Edad, Dirección, Localidad,
+// Provincia, País y Teléfono
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string nombres, apellido, direccion, localidad, provincia, pais, telefono;
+    int edad;
+
+    // Solicitar al usuario que ingrese sus datos personales
+    cout << "Ingrese sus nombres: ";
+    getline(cin, nombres);
+
+    cout << "Ingrese su apellido: ";
+    getline(cin, apellido);
+
+    cout << "Ingrese su edad: ";
+    cin >> edad;
+    cin.ignore(); // Limpiar el buffer del salto de línea
+
+    cout << "Ingrese su dirección: ";
+    getline(cin, direccion);
+
+    cout << "Ingrese su localidad: ";
+    getline(cin, localidad);
+
+    cout << "Ingrese su provincia: ";
+    getline(cin, provincia);
+
+    cout << "Ingrese su país: ";
+    getline(cin, pais);
+
+    cout << "Ingrese su teléfono: ";
+    getline(cin, telefono);
+
+    // Imprimir los datos personales del usuario
+    cout << "\nDatos personales:" << endl;
+    cout << "Nombres: " << nombres << endl;
+    cout << "Apellido: " << apellido << endl;
+    cout << "Edad: " << edad << endl;
+    cout << "Dirección: " << direccion << endl;
+    cout << "Localidad: " << localidad << endl;
+    cout << "Provincia: " << provincia << endl;
+    cout << "País: " << pais << endl;
+    cout << "Teléfono: " << telefono << endl;
+
+    return 0;
+}
