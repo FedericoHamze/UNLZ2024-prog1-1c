@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std; 
+
+// Generador de tablas de multiplicar
+// ingresar un numero del 1 al 9, mostrar cada uno de los renglones de su tabla de multiplicar
+
+int main() { 
+
+int numero = 0;
+int resultado = 0; 
+int contador = 0;
+
+cout << "ingrese un numero" << endl;
+cin >> numero;
+
+while (contador < 10) {
+	
+contador = contador + 1;
+// resultado = numero * contador;
+
+cout << numero << "*" << contador << "=" << numero * contador <<endl;
+}
+return 0;
+}
