@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+using namespace std; 
+
+// contador de pares e impares
+// Esperar por pantalla N numeros
+// Contar cantidad de pares ingresados
+// Contar cantidad de impares ingresados
+// Cortar ciclo cuando se ingrese un 0
+// Mostrar valor de contador por pantalla
+
+int main() { 
+
+int numero = 1;
+int par = 0;
+int impar = 0;
+int contador = 0;
+int totalpares = 0;
+int totalimpares = 0;
+
+
+while (numero !=0) {
+
+cout << "ingrese un numero" << endl;
+cin >> numero;
+contador = contador + 1;
+
+if (numero%2 == 0) {
+par = par + 1;
+totalpares = totalpares + numero;
+
+}
+
+else {
+impar = impar + 1;
+totalimpares = totalimpares + numero;
+}
+}
+
+cout <<  "Los pares son: " << par << endl ;
+cout << "los impares son: " << impar << endl ;
+cout << "las vueltas son: " << contador << endl; 
+cout << "el total acumulado de pares son: " << totalpares << endl;
+cout << "el total acumulado de impares son: " << totalimpares << endl;
+return 0;
+}
